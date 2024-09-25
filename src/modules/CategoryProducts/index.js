@@ -12,7 +12,7 @@ const CategoryProducts = () => {
             setProducts(data)
         }
         fetchProducts()
-    }, [])
+    }, )
 if (products.length === 0) return <div>Loading....</div>
   return (
     <ProductCard products={products}/>
