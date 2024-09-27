@@ -26,11 +26,11 @@ const FeatureCard = ({cards = []}) => {
                                     </div>
                                     <div className="flex-grow">
                                         <p className="leading-relaxed text-base text-gray-700">Discover a wide range of unique products that stand out in style and quality.</p>
-                                        <a className="mt-3 text-indigo-500 inline-flex items-center hover:text-indigo-700 transition-colors">See More
+                                        <span className="mt-3 text-indigo-500 inline-flex items-center hover:text-indigo-700 transition-colors" >See More
                                             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                                             </svg>
-                                        </a>
+                                        </span>
                                     </div>
                                 </div>
                             </Link>

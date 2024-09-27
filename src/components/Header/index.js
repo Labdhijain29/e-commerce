@@ -32,12 +32,18 @@ const Header = () => {
         </Link>
 
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-2xl justify-center font-semibold">
-            {
-                navigations.map((navigation) => (
-                    <Link key={navigation.path} to={navigation.path} className='mr-5 text-indigo-800 hover:text-indigo-500 transition-colors duration-200'>{navigation.name}</Link>
-                ))
-            }
-        </nav>
+    {
+        navigations.map((navigation) => (
+            <Link 
+                key={navigation.path} 
+                to={navigation.path} 
+                className='mr-5 text-indigo-800 hover:text-indigo-500 transition-colors duration-200'>
+                {navigation.name}
+            </Link>
+        ))
+    }
+</nav>
+
         
         <Link to={'/cart'} className="inline-flex items-center bg-indigo-600 border-0 py-3 px-7 focus:outline-none hover:bg-indigo-700 rounded text-xl text-white mt-4 md:mt-0 transition-colors duration-200">
             Go to Cart

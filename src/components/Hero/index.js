@@ -15,7 +15,6 @@ const Hero = () => {
                 </p>
                 <div className="flex justify-center mt-3 p-3">
                     <button className="inline-flex text-white bg-indigo-600 border-0 py-3 px-10 focus:outline-none hover:bg-indigo-700 rounded text-xl transition-colors duration-300">
-                        <FontAwesomeIcon icon="fa-solid fa-arrow-right" className="mr-2" />
                         Shop Now
                     </button>
                     <button className="ml-4 inline-flex text-indigo-700 border-2 border-indigo-500 py-3 px-10 focus:outline-none hover:bg-indigo-100 rounded text-xl transition-colors duration-300">

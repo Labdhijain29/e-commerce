@@ -23,9 +23,7 @@ function App (){
     <Route path='/cart' element ={<Cart/>}/>
     <Route path='/contact' element ={<Contact/>}/>
     <Route path='/about' element ={<About/>}/>
-    <Route path='*' element ={<div>404 Page</div>}/>
   </Routes>
-  
   <Footer/>
     </div>
   )
