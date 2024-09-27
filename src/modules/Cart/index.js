@@ -4,7 +4,12 @@ import { Link, useNavigate } from 'react-router-dom'
 const Cart = () => {
     const navigate = useNavigate()
     const [total, setTotal] = useState(0)
-    const carts = JSON.parse(localStorage.getItem('cart')) || []
+
+    const cartString = localStorage.getItem('cart');
+    const carts = useMemo(() => {
+        return JSON.parse(cartString) || [];
+    }, [cartString]);
+    
     const totals = useMemo(() => {
         return carts.reduce((acc, item) => {
             return acc + (item.price * item.quantity);
@@ -33,7 +38,7 @@ const Cart = () => {
             if (item.id === id) {
                 return {
                     ...item,
-                    quantity: item.quantity - 1
+                    quantity: Math.max(item.quantity - 1, 0)
                 }
             }
             return item
@@ -124,7 +129,7 @@ const Cart = () => {
                     <div className="border-t mt-8">
                         <div className="flex font-semibold justify-between py-6 text-sm uppercase">
                             <span>Total cost</span>
-                            <span>${(total + 10).toFixed(2)}</span>
+                            <span>${(totals + 10).toFixed(2)}</span>
                         </div>
                         <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
                     </div>
